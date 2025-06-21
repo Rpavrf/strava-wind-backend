@@ -42,7 +42,7 @@ app.get('/auth/callback', async (req, res) => {
     });
     tokens = tokenRes.data;
     saveTokens(tokens);
-    res.redirect(`http://localhost:5173/?access_token=${tokens.access_token}`);
+    res.redirect(`https://leorojo.com/?access_token=${tokens.access_token}`);
   } catch (err) {
     res.status(500).send('Strava authentication failed.');
   }
